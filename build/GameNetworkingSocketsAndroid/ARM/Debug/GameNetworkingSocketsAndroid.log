@@ -1,0 +1,5 @@
+﻿  ANDROID_HOME=C:\Users\Levent\AppData\Local\Android\Sdk
+  ANT_HOME=
+  JAVA_HOME=C:\Program Files\Android\jdk\microsoft_dist_openjdk_1.8.0.25
+  NDK_ROOT=C:\Microsoft\AndroidNDK64\android-ndk-r15c
+  GameNetworkingSocketsAndroid.vcxproj -> C:\Users\Levent\Desktop\GameNetworkingSockets\build\src\Release\libGameNetworkingSocketsAndroid.so
