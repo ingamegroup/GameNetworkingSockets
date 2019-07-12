@@ -33,6 +33,13 @@
 
 #include "opensslwrapper.h"
 
+#if defined(POSIX) //LAS
+#include <sys/types.h> //LAS
+#include <sys/socket.h> //LAS
+#include <unistd.h> //LAS
+#include <fcntl.h> //LAS
+#endif //LAS
+
 void OneTimeCryptoInitOpenSSL()
 {
 	static bool once;

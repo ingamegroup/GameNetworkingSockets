@@ -104,8 +104,8 @@
 	#define ALIGN16_POST DECL_ALIGN(16)
 	#define ALIGN32_POST DECL_ALIGN(32)
 	#define ALIGN128_POST DECL_ALIGN(128)
-#else
-	#error
+//#else
+//	#error
 #endif
 
 #if _MSC_VER >= 1400

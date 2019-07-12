@@ -19,7 +19,9 @@
 #include "tier0/valve_off.h"
 
 #if !defined(_WCHAR_T_DEFINED) && !defined(GNUC)
+#if !defined(ANDROID) //LAS
 typedef unsigned short wchar_t;
+#endif
 #define _WCHAR_T_DEFINED
 #endif
 
