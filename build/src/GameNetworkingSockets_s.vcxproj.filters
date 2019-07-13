@@ -1,97 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\crypto_bcrypt.cpp">
+    <ClCompile Include="..\..\src\tier1\bitstring.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\crypto_openssl.cpp">
+    <ClCompile Include="..\..\src\common\crypto_25519_donna.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\crypto_25519_donna.cpp">
+    <ClCompile Include="..\..\src\common\crypto_25519_openssl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\crypto_25519_openssl.cpp">
+    <ClCompile Include="..\..\src\common\crypto_bcrypt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\crypto_textencode.cpp">
+    <ClCompile Include="..\..\src\common\crypto_openssl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\keypair.cpp">
+    <ClCompile Include="..\..\src\common\crypto_textencode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\steamid.cpp">
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\csteamnetworkingsockets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\csteamnetworkingsockets.cpp">
+    <ClCompile Include="..\..\src\tier0\dbg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_flat.cpp">
+    <ClCompile Include="..\..\src\tier1\ipv6text.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_connections.cpp">
+    <ClCompile Include="..\..\src\common\keypair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_lowlevel.cpp">
+    <ClCompile Include="..\..\src\tier1\netadr.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_snp.cpp">
+    <ClCompile Include="..\..\src\common\opensslwrapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_udp.cpp">
+    <ClCompile Include="..\..\src\tier0\platformtime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\steamnetworkingsockets_certs.cpp">
+    <ClCompile Include="..\..\src\common\steamid.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\steamnetworkingsockets_certstore.cpp">
+    <ClCompile Include="..\..\src\steamnetworkingsockets\steamnetworkingsockets_certs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\steamnetworkingsockets_shared.cpp">
+    <ClCompile Include="..\..\src\steamnetworkingsockets\steamnetworkingsockets_certstore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier0\dbg.cpp">
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_connections.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier0\platformtime.cpp">
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_flat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier1\bitstring.cpp">
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_lowlevel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier1\netadr.cpp">
+    <ClCompile Include="..\..\src\steamnetworkingsockets_messages.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier1\utlbuffer.cpp">
+    <ClCompile Include="..\..\src\steamnetworkingsockets_messages_certs.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier1\utlmemory.cpp">
+    <ClCompile Include="..\..\src\steamnetworkingsockets_messages_udp.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier1\ipv6text.c">
+    <ClCompile Include="..\..\src\steamnetworkingsockets\steamnetworkingsockets_shared.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\vstdlib\strtools.cpp">
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_snp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\opensslwrapper.cpp">
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_udp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\build\src\steamnetworkingsockets_messages_certs.pb.cc">
+    <ClCompile Include="..\..\src\vstdlib\strtools.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\build\src\steamnetworkingsockets_messages.pb.cc">
+    <ClCompile Include="..\..\src\tier1\utlbuffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\build\src\steamnetworkingsockets_messages_udp.pb.cc">
+    <ClCompile Include="..\..\src\tier1\utlmemory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="C:\dev\GameNetworkingSockets\src\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
       <UniqueIdentifier>{AB14FA37-7527-3D8D-AC75-9BF37A33DBEB}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\src\CMakeLists.txt" />
   </ItemGroup>
 </Project>

@@ -102,7 +102,7 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\dev\GameNetworkingSockets\CMakeLists.txt">
+    <CustomBuild Include="..\src\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/dev/GameNetworkingSockets/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "D:\Program Files\CMake\bin\cmake.exe" -SC:/dev/GameNetworkingSockets -BC:/dev/GameNetworkingSockets/build --check-stamp-file C:/dev/GameNetworkingSockets/build/CMakeFiles/generate.stamp

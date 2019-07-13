@@ -257,7 +257,7 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\dev\GameNetworkingSockets\tests\CMakeLists.txt">
+    <CustomBuild Include="..\..\tests\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/dev/GameNetworkingSockets/tests/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "D:\Program Files\CMake\bin\cmake.exe" -SC:/dev/GameNetworkingSockets -BC:/dev/GameNetworkingSockets/build --check-stamp-file C:/dev/GameNetworkingSockets/build/tests/CMakeFiles/generate.stamp
@@ -313,7 +313,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\tests\test_crypto.cpp" />
+    <ClCompile Include="..\..\tests\test_crypto.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\dev\GameNetworkingSockets\build\ZERO_CHECK.vcxproj">

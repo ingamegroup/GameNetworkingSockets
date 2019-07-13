@@ -225,7 +225,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\dev\GameNetworkingSockets\src\CMakeLists.txt">
+    <CustomBuild Include="..\..\src\CMakeLists.txt">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/dev/GameNetworkingSockets/src/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "D:\Program Files\CMake\bin\cmake.exe" -SC:/dev/GameNetworkingSockets -BC:/dev/GameNetworkingSockets/build --check-stamp-file C:/dev/GameNetworkingSockets/build/src/CMakeFiles/generate.stamp
@@ -281,39 +281,39 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\crypto_bcrypt.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\crypto_openssl.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\crypto_25519_donna.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\crypto_25519_openssl.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\crypto_textencode.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\keypair.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\steamid.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\csteamnetworkingsockets.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_flat.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_connections.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_lowlevel.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_snp.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_udp.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\steamnetworkingsockets_certs.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\steamnetworkingsockets_certstore.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\steamnetworkingsockets\steamnetworkingsockets_shared.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier0\dbg.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier0\platformtime.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier1\bitstring.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier1\netadr.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier1\utlbuffer.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier1\utlmemory.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\tier1\ipv6text.c">
+    <ClCompile Include="..\..\src\common\crypto_bcrypt.cpp" />
+    <ClCompile Include="..\..\src\common\crypto_openssl.cpp" />
+    <ClCompile Include="..\..\src\common\crypto_25519_donna.cpp" />
+    <ClCompile Include="..\..\src\common\crypto_25519_openssl.cpp" />
+    <ClCompile Include="..\..\src\common\crypto_textencode.cpp" />
+    <ClCompile Include="..\..\src\common\keypair.cpp" />
+    <ClCompile Include="..\..\src\common\steamid.cpp" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\csteamnetworkingsockets.cpp" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_flat.cpp" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_connections.cpp" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_lowlevel.cpp" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_snp.cpp" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_udp.cpp" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets\steamnetworkingsockets_certs.cpp" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets\steamnetworkingsockets_certstore.cpp" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets\steamnetworkingsockets_shared.cpp" />
+    <ClCompile Include="..\..\src\tier0\dbg.cpp" />
+    <ClCompile Include="..\..\src\tier0\platformtime.cpp" />
+    <ClCompile Include="..\..\src\tier1\bitstring.cpp" />
+    <ClCompile Include="..\..\src\tier1\netadr.cpp" />
+    <ClCompile Include="..\..\src\tier1\utlbuffer.cpp" />
+    <ClCompile Include="..\..\src\tier1\utlmemory.cpp" />
+    <ClCompile Include="..\..\src\tier1\ipv6text.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">CompileAsC</CompileAs>
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">CompileAsC</CompileAs>
     </ClCompile>
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\vstdlib\strtools.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\src\common\opensslwrapper.cpp" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\build\src\steamnetworkingsockets_messages_certs.pb.cc" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\build\src\steamnetworkingsockets_messages.pb.cc" />
-    <ClCompile Include="C:\dev\GameNetworkingSockets\build\src\steamnetworkingsockets_messages_udp.pb.cc" />
+    <ClCompile Include="..\..\src\vstdlib\strtools.cpp" />
+    <ClCompile Include="..\..\src\common\opensslwrapper.cpp" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets_messages_certs.pb.cc" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets_messages.pb.cc" />
+    <ClCompile Include="..\..\src\steamnetworkingsockets_messages_udp.pb.cc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\dev\GameNetworkingSockets\build\ZERO_CHECK.vcxproj">

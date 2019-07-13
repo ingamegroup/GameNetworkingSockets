@@ -102,7 +102,7 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\dev\GameNetworkingSockets\build\CMakeFiles\0f8599a97cc51159efe4537b2e64efeb\generate.stamp.rule">
+    <CustomBuild Include="CMakeFiles\0f8599a97cc51159efe4537b2e64efeb\generate.stamp.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking Build System</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "D:\Program Files\CMake\bin\cmake.exe" -SC:/dev/GameNetworkingSockets -BC:/dev/GameNetworkingSockets/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/dev/GameNetworkingSockets/build/GameNetworkingSockets.sln
