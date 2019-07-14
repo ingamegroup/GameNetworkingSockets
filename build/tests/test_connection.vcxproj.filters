@@ -6,9 +6,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\tests\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\tests\test_connection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

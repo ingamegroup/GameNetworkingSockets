@@ -1,8 +1,0 @@
-﻿  steamnetworkingsockets_messages_certs.pb.cc
-  steamnetworkingsockets_messages.pb.cc
-  steamnetworkingsockets_messages_udp.pb.cc
-  ipv6text.c
-     Creating library C:/dev/GameNetworkingSockets/build/src/Release/GameNetworkingSockets.lib and object C:/dev/GameNetworkingSockets/build/src/Release/GameNetworkingSockets.exp
-  Generating code
-  Finished generating code
-  GameNetworkingSockets.vcxproj -> C:\Users\Levent\Desktop\GameNetworkingSockets\build\src\Release\GameNetworkingSockets.dll

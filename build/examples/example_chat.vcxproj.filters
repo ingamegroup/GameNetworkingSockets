@@ -10,7 +10,4 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="..\..\examples\CMakeLists.txt" />
-  </ItemGroup>
 </Project>

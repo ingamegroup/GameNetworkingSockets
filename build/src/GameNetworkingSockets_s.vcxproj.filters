@@ -58,15 +58,6 @@
     <ClCompile Include="..\..\src\steamnetworkingsockets\clientlib\steamnetworkingsockets_lowlevel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\steamnetworkingsockets_messages.pb.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\steamnetworkingsockets_messages_certs.pb.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\steamnetworkingsockets_messages_udp.pb.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\steamnetworkingsockets\steamnetworkingsockets_shared.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -85,13 +76,19 @@
     <ClCompile Include="..\..\src\tier1\utlmemory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="steamnetworkingsockets_messages.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="steamnetworkingsockets_messages_certs.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="steamnetworkingsockets_messages_udp.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
       <UniqueIdentifier>{AB14FA37-7527-3D8D-AC75-9BF37A33DBEB}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="..\..\src\CMakeLists.txt" />
   </ItemGroup>
 </Project>

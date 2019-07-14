@@ -91,7 +91,4 @@
       <UniqueIdentifier>{AB14FA37-7527-3D8D-AC75-9BF37A33DBEB}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="..\..\src\CMakeLists.txt" />
-  </ItemGroup>
 </Project>

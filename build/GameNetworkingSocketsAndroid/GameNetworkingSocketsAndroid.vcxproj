@@ -107,12 +107,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <IncludePath>$(SolutionDir)sdk\protobuf-armv7\include;$(SolutionDir)sdk\OpenSSL-armv7\include;$(SolutionDir)src;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)sdk\protobuf-armv7\lib;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)src\Release\</OutDir>
-    <IntDir>GameNetworkingSockets.dir\Release\</IntDir>
+    <OutDir>$(SolutionDir)src\$(Configuration)</OutDir>
+    <IntDir>$(SolutionDir)src\GameNetworkingSocketsAndroid.dir\$(Configuration)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-    <IncludePath>$(SolutionDir)..\sdk\protobuf-armv7\include;$(SolutionDir)..\sdk\OpenSSL-armv7\include;$(SolutionDir)..\src;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)..\sdk\protobuf-armv7\lib</LibraryPath>
+    <IncludePath>$(SolutionDir)sdk\protobuf-armv7\include;$(SolutionDir)sdk\OpenSSL-armv7\include;$(SolutionDir)src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)sdk\protobuf-armv7\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)src\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)src\GameNetworkingSocketsAndroid.dir\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -173,10 +175,10 @@ xcopy $(SolutionDir)sdk\OpenSSL-armv7\lib\libssl.a $(SolutionDir)src\Release\</C
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PreprocessorDefinitions>ANDROID;STEAMNETWORKINGSOCKETS_FOREXPORT;ENABLE_OPENSSLCONNECTION;CRYPTO_DISABLE_ENCRYPT_WITH_PASSWORD;GOOGLE_PROTOBUF_NO_RTTI;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";GameNetworkingSockets_EXPORTS;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\src;$(SolutionDir)..\..\include;$(SolutionDir)..\..\src\common;$(SolutionDir)..\..\src\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)..\include;$(SolutionDir)..\src\common;$(SolutionDir)..\src\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\sdk\protobuf-armv7\lib;$(SolutionDir)..\sdk\OpenSSL-armv7\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)sdk\protobuf-armv7\lib;$(SolutionDir)sdk\OpenSSL-armv7\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <LibraryDependencies>crypto;protobuf;ssl;%(LibraryDependencies)</LibraryDependencies>
       <AdditionalDependencies>
       </AdditionalDependencies>
