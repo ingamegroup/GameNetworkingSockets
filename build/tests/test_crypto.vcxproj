@@ -83,7 +83,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\dev\GameNetworkingSockets\tests\..\src;C:\dev\GameNetworkingSockets\tests\..\src\public;C:\dev\GameNetworkingSockets\tests\..\src\common;C:\dev\GameNetworkingSockets\tests\..\include;C:\dev\GameNetworkingSockets\src\..\include;C:\dev\GameNetworkingSockets\build\src;D:\OpenSSL-Win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\include;$(SolutionDir)src;$(SolutionDir)..\src\common;$(SolutionDir)..\src\public;$(SolutionDir)sdk\OpenSSL-Win64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
