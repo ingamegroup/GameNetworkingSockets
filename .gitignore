@@ -37,7 +37,4 @@ perf.data.old
 /build/.vs
 /.vscode
 /src/.vs/*
-/src/steamnetworkingsockets/Messageswin64Debug/*
-/src/steamnetworkingsockets/certtool/win64/*
-/src/steamnetworkingsockets/clientlib/win64/*
 *.swp

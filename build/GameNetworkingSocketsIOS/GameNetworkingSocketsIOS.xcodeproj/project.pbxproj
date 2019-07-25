@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BC0E6C922E4956900E0CB01 /* GameNetworkingSocketsIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6C822E4956900E0CB01 /* GameNetworkingSocketsIOS.m */; };
+		7BC0E6CA22E4956900E0CB01 /* GameNetworkingSocketsIOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BC0E6C722E4956900E0CB01 /* GameNetworkingSocketsIOS.h */; };
+		7BC0E6D122E495C500E0CB01 /* bitstring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6D022E495C500E0CB01 /* bitstring.cpp */; };
+		7BC0E6D722E495EE00E0CB01 /* crypto_25519_donna.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6D222E495ED00E0CB01 /* crypto_25519_donna.cpp */; };
+		7BC0E6D822E495EE00E0CB01 /* crypto_25519_openssl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6D322E495ED00E0CB01 /* crypto_25519_openssl.cpp */; };
+		7BC0E6D922E495EE00E0CB01 /* crypto_bcrypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6D422E495EE00E0CB01 /* crypto_bcrypt.cpp */; };
+		7BC0E6DA22E495EE00E0CB01 /* crypto_openssl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6D522E495EE00E0CB01 /* crypto_openssl.cpp */; };
+		7BC0E6DB22E495EE00E0CB01 /* crypto_textencode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6D622E495EE00E0CB01 /* crypto_textencode.cpp */; };
+		7BC0E6DD22E4961200E0CB01 /* csteamnetworkingsockets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6DC22E4961200E0CB01 /* csteamnetworkingsockets.cpp */; };
+		7BC0E6DF22E4962C00E0CB01 /* dbg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6DE22E4962C00E0CB01 /* dbg.cpp */; };
+		7BC0E6E122E4965800E0CB01 /* ipv6text.c in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6E022E4965800E0CB01 /* ipv6text.c */; };
+		7BC0E6E322E4967000E0CB01 /* keypair.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6E222E4967000E0CB01 /* keypair.cpp */; };
+		7BC0E6E522E4968600E0CB01 /* netadr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6E422E4968500E0CB01 /* netadr.cpp */; };
+		7BC0E6E722E4969800E0CB01 /* opensslwrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6E622E4969800E0CB01 /* opensslwrapper.cpp */; };
+		7BC0E6E922E496AB00E0CB01 /* platformtime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6E822E496AB00E0CB01 /* platformtime.cpp */; };
+		7BC0E6EB22E496BD00E0CB01 /* steamid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6EA22E496BD00E0CB01 /* steamid.cpp */; };
+		7BC0E6EE22E4981100E0CB01 /* steamnetworkingsockets_certstore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6EC22E4981100E0CB01 /* steamnetworkingsockets_certstore.cpp */; };
+		7BC0E6EF22E4981100E0CB01 /* steamnetworkingsockets_certs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6ED22E4981100E0CB01 /* steamnetworkingsockets_certs.cpp */; };
+		7BC0E6F322E4983E00E0CB01 /* steamnetworkingsockets_flat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6F022E4983D00E0CB01 /* steamnetworkingsockets_flat.cpp */; };
+		7BC0E6F422E4983E00E0CB01 /* steamnetworkingsockets_lowlevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6F122E4983E00E0CB01 /* steamnetworkingsockets_lowlevel.cpp */; };
+		7BC0E6F522E4983E00E0CB01 /* steamnetworkingsockets_connections.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6F222E4983E00E0CB01 /* steamnetworkingsockets_connections.cpp */; };
+		7BC0E6F922E4987F00E0CB01 /* steamnetworkingsockets_messages_udp.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6F622E4987F00E0CB01 /* steamnetworkingsockets_messages_udp.pb.cc */; };
+		7BC0E6FA22E4987F00E0CB01 /* steamnetworkingsockets_messages_certs.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6F722E4987F00E0CB01 /* steamnetworkingsockets_messages_certs.pb.cc */; };
+		7BC0E6FB22E4987F00E0CB01 /* steamnetworkingsockets_messages.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6F822E4987F00E0CB01 /* steamnetworkingsockets_messages.pb.cc */; };
+		7BC0E6FD22E498F200E0CB01 /* steamnetworkingsockets_shared.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6FC22E498F100E0CB01 /* steamnetworkingsockets_shared.cpp */; };
+		7BC0E70022E4990E00E0CB01 /* steamnetworkingsockets_snp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6FE22E4990E00E0CB01 /* steamnetworkingsockets_snp.cpp */; };
+		7BC0E70122E4990E00E0CB01 /* steamnetworkingsockets_udp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6FF22E4990E00E0CB01 /* steamnetworkingsockets_udp.cpp */; };
+		7BD5EF8422E5153E003BF8AC /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5EF8222E5153E003BF8AC /* libcrypto.a */; };
+		7BD5EF8522E5153E003BF8AC /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5EF8322E5153E003BF8AC /* libssl.a */; };
+		7BD5EF8D22E51F07003BF8AC /* strtools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5EF8C22E51F07003BF8AC /* strtools.cpp */; };
+		7BD5EF9022E51F26003BF8AC /* utlbuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5EF8E22E51F25003BF8AC /* utlbuffer.cpp */; };
+		7BD5EF9122E51F26003BF8AC /* utlmemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5EF8F22E51F26003BF8AC /* utlmemory.cpp */; };
+		7BD5EF9522E62270003BF8AC /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5EF7E22E50C11003BF8AC /* libprotobuf.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7BC0E6C222E4956900E0CB01 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				7BC0E6CA22E4956900E0CB01 /* GameNetworkingSocketsIOS.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7BC0E6C422E4956900E0CB01 /* libGameNetworkingSocketsIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGameNetworkingSocketsIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC0E6C722E4956900E0CB01 /* GameNetworkingSocketsIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameNetworkingSocketsIOS.h; sourceTree = "<group>"; };
+		7BC0E6C822E4956900E0CB01 /* GameNetworkingSocketsIOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameNetworkingSocketsIOS.m; sourceTree = "<group>"; };
+		7BC0E6D022E495C500E0CB01 /* bitstring.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = bitstring.cpp; path = ../../../src/tier1/bitstring.cpp; sourceTree = "<group>"; };
+		7BC0E6D222E495ED00E0CB01 /* crypto_25519_donna.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = crypto_25519_donna.cpp; path = ../../../src/common/crypto_25519_donna.cpp; sourceTree = "<group>"; };
+		7BC0E6D322E495ED00E0CB01 /* crypto_25519_openssl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = crypto_25519_openssl.cpp; path = ../../../src/common/crypto_25519_openssl.cpp; sourceTree = "<group>"; };
+		7BC0E6D422E495EE00E0CB01 /* crypto_bcrypt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = crypto_bcrypt.cpp; path = ../../../src/common/crypto_bcrypt.cpp; sourceTree = "<group>"; };
+		7BC0E6D522E495EE00E0CB01 /* crypto_openssl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = crypto_openssl.cpp; path = ../../../src/common/crypto_openssl.cpp; sourceTree = "<group>"; };
+		7BC0E6D622E495EE00E0CB01 /* crypto_textencode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = crypto_textencode.cpp; path = ../../../src/common/crypto_textencode.cpp; sourceTree = "<group>"; };
+		7BC0E6DC22E4961200E0CB01 /* csteamnetworkingsockets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = csteamnetworkingsockets.cpp; path = ../../../src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.cpp; sourceTree = "<group>"; };
+		7BC0E6DE22E4962C00E0CB01 /* dbg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dbg.cpp; path = ../../../src/tier0/dbg.cpp; sourceTree = "<group>"; };
+		7BC0E6E022E4965800E0CB01 /* ipv6text.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ipv6text.c; path = ../../../src/tier1/ipv6text.c; sourceTree = "<group>"; };
+		7BC0E6E222E4967000E0CB01 /* keypair.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = keypair.cpp; path = ../../../src/common/keypair.cpp; sourceTree = "<group>"; };
+		7BC0E6E422E4968500E0CB01 /* netadr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = netadr.cpp; path = ../../../src/tier1/netadr.cpp; sourceTree = "<group>"; };
+		7BC0E6E622E4969800E0CB01 /* opensslwrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opensslwrapper.cpp; path = ../../../src/common/opensslwrapper.cpp; sourceTree = "<group>"; };
+		7BC0E6E822E496AB00E0CB01 /* platformtime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = platformtime.cpp; path = ../../../src/tier0/platformtime.cpp; sourceTree = "<group>"; };
+		7BC0E6EA22E496BD00E0CB01 /* steamid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamid.cpp; path = ../../../src/common/steamid.cpp; sourceTree = "<group>"; };
+		7BC0E6EC22E4981100E0CB01 /* steamnetworkingsockets_certstore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_certstore.cpp; path = ../../../src/steamnetworkingsockets/steamnetworkingsockets_certstore.cpp; sourceTree = "<group>"; };
+		7BC0E6ED22E4981100E0CB01 /* steamnetworkingsockets_certs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_certs.cpp; path = ../../../src/steamnetworkingsockets/steamnetworkingsockets_certs.cpp; sourceTree = "<group>"; };
+		7BC0E6F022E4983D00E0CB01 /* steamnetworkingsockets_flat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_flat.cpp; path = ../../../src/steamnetworkingsockets/clientlib/steamnetworkingsockets_flat.cpp; sourceTree = "<group>"; };
+		7BC0E6F122E4983E00E0CB01 /* steamnetworkingsockets_lowlevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_lowlevel.cpp; path = ../../../src/steamnetworkingsockets/clientlib/steamnetworkingsockets_lowlevel.cpp; sourceTree = "<group>"; };
+		7BC0E6F222E4983E00E0CB01 /* steamnetworkingsockets_connections.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_connections.cpp; path = ../../../src/steamnetworkingsockets/clientlib/steamnetworkingsockets_connections.cpp; sourceTree = "<group>"; };
+		7BC0E6F622E4987F00E0CB01 /* steamnetworkingsockets_messages_udp.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_messages_udp.pb.cc; path = ../../src/steamnetworkingsockets_messages_udp.pb.cc; sourceTree = "<group>"; };
+		7BC0E6F722E4987F00E0CB01 /* steamnetworkingsockets_messages_certs.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_messages_certs.pb.cc; path = ../../src/steamnetworkingsockets_messages_certs.pb.cc; sourceTree = "<group>"; };
+		7BC0E6F822E4987F00E0CB01 /* steamnetworkingsockets_messages.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_messages.pb.cc; path = ../../src/steamnetworkingsockets_messages.pb.cc; sourceTree = "<group>"; };
+		7BC0E6FC22E498F100E0CB01 /* steamnetworkingsockets_shared.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_shared.cpp; path = ../../../src/steamnetworkingsockets/steamnetworkingsockets_shared.cpp; sourceTree = "<group>"; };
+		7BC0E6FE22E4990E00E0CB01 /* steamnetworkingsockets_snp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_snp.cpp; path = ../../../src/steamnetworkingsockets/clientlib/steamnetworkingsockets_snp.cpp; sourceTree = "<group>"; };
+		7BC0E6FF22E4990E00E0CB01 /* steamnetworkingsockets_udp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_udp.cpp; path = ../../../src/steamnetworkingsockets/clientlib/steamnetworkingsockets_udp.cpp; sourceTree = "<group>"; };
+		7BD5EF7E22E50C11003BF8AC /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../sdk/libprotobuf.a; sourceTree = "<group>"; };
+		7BD5EF8222E5153E003BF8AC /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../sdk/libcrypto.a; sourceTree = "<group>"; };
+		7BD5EF8322E5153E003BF8AC /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../sdk/libssl.a; sourceTree = "<group>"; };
+		7BD5EF8C22E51F07003BF8AC /* strtools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = strtools.cpp; path = ../../../src/vstdlib/strtools.cpp; sourceTree = "<group>"; };
+		7BD5EF8E22E51F25003BF8AC /* utlbuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utlbuffer.cpp; path = ../../../src/tier1/utlbuffer.cpp; sourceTree = "<group>"; };
+		7BD5EF8F22E51F26003BF8AC /* utlmemory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utlmemory.cpp; path = ../../../src/tier1/utlmemory.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BC0E6C122E4956900E0CB01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD5EF9522E62270003BF8AC /* libprotobuf.a in Frameworks */,
+				7BD5EF8422E5153E003BF8AC /* libcrypto.a in Frameworks */,
+				7BD5EF8522E5153E003BF8AC /* libssl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BC0E6BB22E4956900E0CB01 = {
+			isa = PBXGroup;
+			children = (
+				7BC0E6C622E4956900E0CB01 /* GameNetworkingSocketsIOS */,
+				7BC0E6C522E4956900E0CB01 /* Products */,
+				7BD5EEFD22E4BD4C003BF8AC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7BC0E6C522E4956900E0CB01 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BC0E6C422E4956900E0CB01 /* libGameNetworkingSocketsIOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BC0E6C622E4956900E0CB01 /* GameNetworkingSocketsIOS */ = {
+			isa = PBXGroup;
+			children = (
+				7BC0E6D022E495C500E0CB01 /* bitstring.cpp */,
+				7BC0E6D222E495ED00E0CB01 /* crypto_25519_donna.cpp */,
+				7BC0E6D322E495ED00E0CB01 /* crypto_25519_openssl.cpp */,
+				7BC0E6D422E495EE00E0CB01 /* crypto_bcrypt.cpp */,
+				7BC0E6D522E495EE00E0CB01 /* crypto_openssl.cpp */,
+				7BC0E6D622E495EE00E0CB01 /* crypto_textencode.cpp */,
+				7BC0E6DC22E4961200E0CB01 /* csteamnetworkingsockets.cpp */,
+				7BC0E6DE22E4962C00E0CB01 /* dbg.cpp */,
+				7BC0E6E022E4965800E0CB01 /* ipv6text.c */,
+				7BC0E6E222E4967000E0CB01 /* keypair.cpp */,
+				7BC0E6E422E4968500E0CB01 /* netadr.cpp */,
+				7BC0E6E622E4969800E0CB01 /* opensslwrapper.cpp */,
+				7BC0E6E822E496AB00E0CB01 /* platformtime.cpp */,
+				7BC0E6EA22E496BD00E0CB01 /* steamid.cpp */,
+				7BC0E6ED22E4981100E0CB01 /* steamnetworkingsockets_certs.cpp */,
+				7BC0E6EC22E4981100E0CB01 /* steamnetworkingsockets_certstore.cpp */,
+				7BC0E6F222E4983E00E0CB01 /* steamnetworkingsockets_connections.cpp */,
+				7BC0E6F022E4983D00E0CB01 /* steamnetworkingsockets_flat.cpp */,
+				7BC0E6F122E4983E00E0CB01 /* steamnetworkingsockets_lowlevel.cpp */,
+				7BC0E6F722E4987F00E0CB01 /* steamnetworkingsockets_messages_certs.pb.cc */,
+				7BC0E6F622E4987F00E0CB01 /* steamnetworkingsockets_messages_udp.pb.cc */,
+				7BC0E6F822E4987F00E0CB01 /* steamnetworkingsockets_messages.pb.cc */,
+				7BC0E6FC22E498F100E0CB01 /* steamnetworkingsockets_shared.cpp */,
+				7BC0E6FE22E4990E00E0CB01 /* steamnetworkingsockets_snp.cpp */,
+				7BC0E6FF22E4990E00E0CB01 /* steamnetworkingsockets_udp.cpp */,
+				7BD5EF8C22E51F07003BF8AC /* strtools.cpp */,
+				7BD5EF8E22E51F25003BF8AC /* utlbuffer.cpp */,
+				7BD5EF8F22E51F26003BF8AC /* utlmemory.cpp */,
+				7BC0E6C722E4956900E0CB01 /* GameNetworkingSocketsIOS.h */,
+				7BC0E6C822E4956900E0CB01 /* GameNetworkingSocketsIOS.m */,
+			);
+			path = GameNetworkingSocketsIOS;
+			sourceTree = "<group>";
+		};
+		7BD5EEFD22E4BD4C003BF8AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BD5EF8222E5153E003BF8AC /* libcrypto.a */,
+				7BD5EF8322E5153E003BF8AC /* libssl.a */,
+				7BD5EF7E22E50C11003BF8AC /* libprotobuf.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BC0E6C322E4956900E0CB01 /* GameNetworkingSocketsIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BC0E6CD22E4956900E0CB01 /* Build configuration list for PBXNativeTarget "GameNetworkingSocketsIOS" */;
+			buildPhases = (
+				7BC0E6C022E4956900E0CB01 /* Sources */,
+				7BC0E6C122E4956900E0CB01 /* Frameworks */,
+				7BC0E6C222E4956900E0CB01 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GameNetworkingSocketsIOS;
+			productName = GameNetworkingSocketsIOS;
+			productReference = 7BC0E6C422E4956900E0CB01 /* libGameNetworkingSocketsIOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BC0E6BC22E4956900E0CB01 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "levent ahmet sevgili";
+				TargetAttributes = {
+					7BC0E6C322E4956900E0CB01 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 7BC0E6BF22E4956900E0CB01 /* Build configuration list for PBXProject "GameNetworkingSocketsIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7BC0E6BB22E4956900E0CB01;
+			productRefGroup = 7BC0E6C522E4956900E0CB01 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BC0E6C322E4956900E0CB01 /* GameNetworkingSocketsIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BC0E6C022E4956900E0CB01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BC0E6D122E495C500E0CB01 /* bitstring.cpp in Sources */,
+				7BC0E6E122E4965800E0CB01 /* ipv6text.c in Sources */,
+				7BC0E6DB22E495EE00E0CB01 /* crypto_textencode.cpp in Sources */,
+				7BC0E70022E4990E00E0CB01 /* steamnetworkingsockets_snp.cpp in Sources */,
+				7BC0E6DA22E495EE00E0CB01 /* crypto_openssl.cpp in Sources */,
+				7BC0E6F322E4983E00E0CB01 /* steamnetworkingsockets_flat.cpp in Sources */,
+				7BD5EF9122E51F26003BF8AC /* utlmemory.cpp in Sources */,
+				7BC0E6D922E495EE00E0CB01 /* crypto_bcrypt.cpp in Sources */,
+				7BC0E6EB22E496BD00E0CB01 /* steamid.cpp in Sources */,
+				7BC0E6F522E4983E00E0CB01 /* steamnetworkingsockets_connections.cpp in Sources */,
+				7BC0E70122E4990E00E0CB01 /* steamnetworkingsockets_udp.cpp in Sources */,
+				7BC0E6E922E496AB00E0CB01 /* platformtime.cpp in Sources */,
+				7BC0E6E522E4968600E0CB01 /* netadr.cpp in Sources */,
+				7BC0E6FD22E498F200E0CB01 /* steamnetworkingsockets_shared.cpp in Sources */,
+				7BC0E6C922E4956900E0CB01 /* GameNetworkingSocketsIOS.m in Sources */,
+				7BC0E6E322E4967000E0CB01 /* keypair.cpp in Sources */,
+				7BC0E6DD22E4961200E0CB01 /* csteamnetworkingsockets.cpp in Sources */,
+				7BC0E6E722E4969800E0CB01 /* opensslwrapper.cpp in Sources */,
+				7BC0E6DF22E4962C00E0CB01 /* dbg.cpp in Sources */,
+				7BC0E6F422E4983E00E0CB01 /* steamnetworkingsockets_lowlevel.cpp in Sources */,
+				7BC0E6F922E4987F00E0CB01 /* steamnetworkingsockets_messages_udp.pb.cc in Sources */,
+				7BC0E6EE22E4981100E0CB01 /* steamnetworkingsockets_certstore.cpp in Sources */,
+				7BD5EF9022E51F26003BF8AC /* utlbuffer.cpp in Sources */,
+				7BC0E6FB22E4987F00E0CB01 /* steamnetworkingsockets_messages.pb.cc in Sources */,
+				7BC0E6FA22E4987F00E0CB01 /* steamnetworkingsockets_messages_certs.pb.cc in Sources */,
+				7BD5EF8D22E51F07003BF8AC /* strtools.cpp in Sources */,
+				7BC0E6D822E495EE00E0CB01 /* crypto_25519_openssl.cpp in Sources */,
+				7BC0E6D722E495EE00E0CB01 /* crypto_25519_donna.cpp in Sources */,
+				7BC0E6EF22E4981100E0CB01 /* steamnetworkingsockets_certs.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7BC0E6CB22E4956900E0CB01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MACH_O_TYPE = mh_dylib;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7BC0E6CC22E4956900E0CB01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LIBRARY_SEARCH_PATHS = "../../build/sdk/**";
+				MACH_O_TYPE = mh_dylib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 arm64e";
+			};
+			name = Release;
+		};
+		7BC0E6CE22E4956900E0CB01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BC0E6CF22E4956900E0CB01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					OSX,
+					STEAMNETWORKINGSOCKETS_FOREXPORT,
+					ENABLE_OPENSSLCONNECTION,
+					CRYPTO_DISABLE_ENCRYPT_WITH_PASSWORD,
+					GOOGLE_PROTOBUF_NO_RTTI,
+					_CRT_SECURE_NO_WARNINGS,
+					_CRT_NONSTDC_NO_WARNINGS,
+					"CMAKE_INTDIR=\"Release\"",
+					GameNetworkingSockets_EXPORTS,
+					PROTOBUF_USE_DLLS,
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"../../src/**",
+					../../build/src,
+					../../include,
+					"../../build/sdk/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LIBRARY_SEARCH_PATHS = "../../build/sdk/**";
+				MACH_O_TYPE = staticlib;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BC0E6BF22E4956900E0CB01 /* Build configuration list for PBXProject "GameNetworkingSocketsIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC0E6CB22E4956900E0CB01 /* Debug */,
+				7BC0E6CC22E4956900E0CB01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BC0E6CD22E4956900E0CB01 /* Build configuration list for PBXNativeTarget "GameNetworkingSocketsIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC0E6CE22E4956900E0CB01 /* Debug */,
+				7BC0E6CF22E4956900E0CB01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BC0E6BC22E4956900E0CB01 /* Project object */;
+}
