@@ -7,6 +7,3 @@ public:
 	GameNetworkingSocketsAndroid();
 	~GameNetworkingSocketsAndroid();
 };
-
-extern "C" void Connect(char *ipAdress);
-extern "C" void SendMessage(char *msg);

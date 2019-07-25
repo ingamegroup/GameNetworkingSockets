@@ -95,6 +95,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>
+    </LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
   </PropertyGroup>
@@ -107,8 +109,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <IncludePath>$(SolutionDir)sdk\protobuf-armv7\include;$(SolutionDir)sdk\OpenSSL-armv7\include;$(SolutionDir)src;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)sdk\protobuf-armv7\lib;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)src\$(Configuration)</OutDir>
-    <IntDir>$(SolutionDir)src\GameNetworkingSocketsAndroid.dir\$(Configuration)</IntDir>
+    <OutDir>$(SolutionDir)src\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)src\GameNetworkingSocketsAndroid.dir\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <IncludePath>$(SolutionDir)sdk\protobuf-armv7\include;$(SolutionDir)sdk\OpenSSL-armv7\include;$(SolutionDir)src;$(IncludePath)</IncludePath>
@@ -127,6 +129,10 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <ClCompile>
@@ -161,13 +167,15 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)sdk\protobuf-armv7\lib;$(SolutionDir)sdk\OpenSSL-armv7\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <LibraryDependencies>crypto;protobuf;ssl;%(LibraryDependencies)</LibraryDependencies>
+      <LibraryDependencies>cryptod;protobufd;ssld;%(LibraryDependencies)</LibraryDependencies>
       <AdditionalOptions> -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)sdk\protobuf-armv7\lib\libprotobuf.a $(SolutionDir)src\Release\
-xcopy $(SolutionDir)sdk\OpenSSL-armv7\lib\libcrypto.a $(SolutionDir)src\Release\
-xcopy $(SolutionDir)sdk\OpenSSL-armv7\lib\libssl.a $(SolutionDir)src\Release\</Command>
+      <Command>xcopy $(SolutionDir)sdk\protobuf-armv7\lib\libprotobuf.a $(SolutionDir)src\$(Configuration)\
+xcopy $(SolutionDir)sdk\OpenSSL-armv7\lib\libcrypto.a $(SolutionDir)src\$(Configuration)\
+xcopy $(SolutionDir)sdk\OpenSSL-armv7\lib\libssl.a $(SolutionDir)src\$(Configuration)\
+cd $(SolutionDir)src\$(Configuration)
+start .</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -184,6 +192,13 @@ xcopy $(SolutionDir)sdk\OpenSSL-armv7\lib\libssl.a $(SolutionDir)src\Release\</C
       </AdditionalDependencies>
       <AdditionalOptions> -lm %(AdditionalOptions)</AdditionalOptions>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(SolutionDir)sdk\protobuf-armv7\lib\libprotobuf.a $(SolutionDir)src\$(Configuration)\
+xcopy $(SolutionDir)sdk\OpenSSL-armv7\lib\libcrypto.a $(SolutionDir)src\$(Configuration)\
+xcopy $(SolutionDir)sdk\OpenSSL-armv7\lib\libssl.a $(SolutionDir)src\$(Configuration)\
+cd $(SolutionDir)src\$(Configuration)
+start .</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\examples\example_chat.cpp" />
