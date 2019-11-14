@@ -1284,45 +1284,45 @@ using namespace SteamNetworkingSocketsLib;
 
 #ifdef STEAMNETWORKINGSOCKETS_OPENSOURCE
 
-static CSteamNetworkingSockets *s_pSteamNetworkingSockets = nullptr;
+//static CSteamNetworkingSockets *s_pSteamNetworkingSockets = nullptr;
 
-STEAMNETWORKINGSOCKETS_INTERFACE bool GameNetworkingSockets_Init( const SteamNetworkingIdentity *pIdentity, SteamNetworkingErrMsg &errMsg )
+STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingSockets* GameNetworkingSockets_Init( const SteamNetworkingIdentity *pIdentity, SteamNetworkingErrMsg &errMsg )
 {
 	SteamDatagramTransportLock lock;
 
-	// Already initted?
-	if ( s_pSteamNetworkingSockets )
-	{
-		AssertMsg( false, "GameNetworkingSockets_init called multiple times?" );
-		return true;
-	}
+	//// Already initted?
+	//if ( s_pSteamNetworkingSockets )
+	//{
+	//	AssertMsg( false, "GameNetworkingSockets_init called multiple times?" );
+	//	return true;
+	//}
 
 	// Init basic functionality
 	CSteamNetworkingSockets *pSteamNetworkingSockets = new CSteamNetworkingSockets;
 	if ( !pSteamNetworkingSockets->BInitGameNetworkingSockets( pIdentity, errMsg ) )
 	{
 		pSteamNetworkingSockets->Destroy();
-		return false;
+		return nullptr;
 	}
 
-	s_pSteamNetworkingSockets = pSteamNetworkingSockets;
-	return true;
+	//s_pSteamNetworkingSockets = pSteamNetworkingSockets;
+	return pSteamNetworkingSockets;
 }
 
-STEAMNETWORKINGSOCKETS_INTERFACE void GameNetworkingSockets_Kill()
+STEAMNETWORKINGSOCKETS_INTERFACE void GameNetworkingSockets_Kill(ISteamNetworkingSockets *pSteamNetworkingSockets)
 {
+	CSteamNetworkingSockets *steamNetworkingSockets = (CSteamNetworkingSockets *)pSteamNetworkingSockets;
 	SteamDatagramTransportLock lock;
-	if ( s_pSteamNetworkingSockets )
+	if (steamNetworkingSockets)
 	{
-		s_pSteamNetworkingSockets->Destroy();
-		s_pSteamNetworkingSockets = nullptr;
+		steamNetworkingSockets->Destroy();
 	}
 }
 
-STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingSockets *SteamNetworkingSockets()
+/*STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingSockets *SteamNetworkingSockets()
 {
 	return s_pSteamNetworkingSockets;
-}
+}*/
 
 STEAMNETWORKINGSOCKETS_INTERFACE ISteamNetworkingUtils *SteamNetworkingUtils()
 {
