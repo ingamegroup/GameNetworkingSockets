@@ -52,6 +52,9 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
+    <UseOfStl>c++_static</UseOfStl>
+    <ThumbMode>Disabled</ThumbMode>
+    <AndroidAPILevel>android-21</AndroidAPILevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -86,6 +89,8 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>Clang_5_0</PlatformToolset>
+    <AndroidAPILevel>android-21</AndroidAPILevel>
+    <UseOfStl>c++_static</UseOfStl>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
@@ -101,10 +106,18 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <OutDir>$(SolutionDir)src\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)src\GameNetworkingSocketsAndroid.dir\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)sdk\OpenSSL-android_x86\include;$(SolutionDir)sdk\protobuf-android_x86\include;$(SolutionDir)src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)sdk\protobuf-android_x86\lib;$(SolutionDir)sdk\OpenSSL-android_x86\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <OutDir>$(SolutionDir)src\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)src\GameNetworkingSocketsAndroid.dir\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)sdk\OpenSSL-armv8\include;$(SolutionDir)sdk\protobuf-armv8\include;$(SolutionDir)src;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)sdk\protobuf-armv8\lib;$(SolutionDir)sdk\OpenSSL-armv8\lib</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <IncludePath>$(SolutionDir)sdk\protobuf-armv7\include;$(SolutionDir)sdk\OpenSSL-armv7\include;$(SolutionDir)src;$(IncludePath)</IncludePath>
@@ -128,6 +141,7 @@
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>
@@ -142,9 +156,23 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)..\include;$(SolutionDir)..\src\common;$(SolutionDir)..\src\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ANDROID;STEAMNETWORKINGSOCKETS_FOREXPORT;ENABLE_OPENSSLCONNECTION;CRYPTO_DISABLE_ENCRYPT_WITH_PASSWORD;GOOGLE_PROTOBUF_NO_RTTI;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";GameNetworkingSockets_EXPORTS;PROTOBUF_USE_DLLS;_FORTIFY_SOURCE;__OPTIMIZE__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)sdk\protobuf-android_x86\lib;$(SolutionDir)sdk\OpenSSL-android_x86\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>crypto;protobuf;ssl;%(LibraryDependencies)</LibraryDependencies>
+      <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(SolutionDir)sdk\protobuf-android_x86\lib\libprotobuf.a $(SolutionDir)src\$(Configuration)\
+xcopy $(SolutionDir)sdk\OpenSSL-android_x86\lib\libcrypto.a $(SolutionDir)src\$(Configuration)\
+xcopy $(SolutionDir)sdk\OpenSSL-android_x86\lib\libssl.a $(SolutionDir)src\$(Configuration)\
+cd $(SolutionDir)src\$(Configuration)
+start .</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
@@ -154,9 +182,28 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)..\include;$(SolutionDir)..\src\common;$(SolutionDir)..\src\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>ANDROID;STEAMNETWORKINGSOCKETS_FOREXPORT;ENABLE_OPENSSLCONNECTION;CRYPTO_DISABLE_ENCRYPT_WITH_PASSWORD;GOOGLE_PROTOBUF_NO_RTTI;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";GameNetworkingSockets_EXPORTS;PROTOBUF_USE_DLLS;_FORTIFY_SOURCE;__OPTIMIZE__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FloatABI>
+      </FloatABI>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)sdk\protobuf-armv8\lib;$(SolutionDir)sdk\OpenSSL-armv8\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>crypto;protobuf;ssl;%(LibraryDependencies)</LibraryDependencies>
+      <VerboseOutput>false</VerboseOutput>
+      <AdditionalOptions>-lm %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy $(SolutionDir)sdk\protobuf-armv8\lib\libprotobuf.a $(SolutionDir)src\$(Configuration)\
+xcopy $(SolutionDir)sdk\OpenSSL-armv8\lib\libcrypto.a $(SolutionDir)src\$(Configuration)\
+xcopy $(SolutionDir)sdk\OpenSSL-armv8\lib\libssl.a $(SolutionDir)src\$(Configuration)\
+cd $(SolutionDir)src\$(Configuration)
+start .</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -182,8 +229,10 @@ start .</Command>
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <PreprocessorDefinitions>ANDROID;STEAMNETWORKINGSOCKETS_FOREXPORT;ENABLE_OPENSSLCONNECTION;CRYPTO_DISABLE_ENCRYPT_WITH_PASSWORD;GOOGLE_PROTOBUF_NO_RTTI;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";GameNetworkingSockets_EXPORTS;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>ANDROID;STEAMNETWORKINGSOCKETS_FOREXPORT;ENABLE_OPENSSLCONNECTION;CRYPTO_DISABLE_ENCRYPT_WITH_PASSWORD;GOOGLE_PROTOBUF_NO_RTTI;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";GameNetworkingSockets_EXPORTS;PROTOBUF_USE_DLLS;_FORTIFY_SOURCE;__OPTIMIZE__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)src;$(SolutionDir)..\include;$(SolutionDir)..\src\common;$(SolutionDir)..\src\public;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>LineNumber</DebugInformationFormat>
+      <AdditionalOptions> -dsym=true %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)sdk\protobuf-armv7\lib;$(SolutionDir)sdk\OpenSSL-armv7\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -201,7 +250,6 @@ start .</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\examples\example_chat.cpp" />
     <ClCompile Include="..\..\src\common\crypto_25519_donna.cpp" />
     <ClCompile Include="..\..\src\common\crypto_25519_openssl.cpp" />
     <ClCompile Include="..\..\src\common\crypto_bcrypt.cpp" />

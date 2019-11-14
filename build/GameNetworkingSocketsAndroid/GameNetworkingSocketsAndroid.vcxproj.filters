@@ -2,7 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="GameNetworkingSocketsAndroid.cpp" />
-    <ClCompile Include="..\..\examples\example_chat.cpp" />
     <ClCompile Include="..\..\src\tier1\bitstring.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
