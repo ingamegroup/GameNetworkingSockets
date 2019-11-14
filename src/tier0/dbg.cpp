@@ -8,6 +8,9 @@
 
 #include "tier0/dbg.h"
 
+#ifdef __ANDROID__
+#include <android/log.h>
+#endif
 #if defined(_WIN32) && !defined(_XBOX)
 #include "winlite.h"
 #include <tchar.h>
@@ -91,10 +94,11 @@ bool Plat_IsInDebugSession()
 #if defined (POSIX) && !defined( _PS3 )
 static bool s_bSetSigHandler = false;
 #endif
-
+ 
 SpewRetval_t DefaultSpewFunc( SpewType_t type, tchar const *pMsg )
-{
-#if defined (POSIX) && !defined( _PS3 ) // No signals on PS3
+{	 
+
+/*#if defined (POSIX) && !defined( _PS3 ) // No signals on PS3
 	if ( ! s_bSetSigHandler )
 	{
 		signal( SIGTRAP, SIG_IGN );
@@ -106,12 +110,15 @@ SpewRetval_t DefaultSpewFunc( SpewType_t type, tchar const *pMsg )
 	printf( _T("STEAMPS3 - %s"), pMsg );
 #else
 	printf( _T("%s"), pMsg );
+
+
+	
 #endif
 	if( type == SPEW_ASSERT )
 		return SPEW_DEBUGGER;
 	else if( type == SPEW_ERROR )
 		return SPEW_ABORT;
-	else
+	else*/ 
 		return SPEW_CONTINUE;
 }
 
@@ -170,7 +177,7 @@ void  _SpewInfo( SpewType_t type, tchar const* pFile, int line )
 	//
 	s_pFileName = CleanupAssertPath( pFile );
 
-	s_Line = line;
+	s_Line = line; 
 	s_SpewType = type;
 }
 
@@ -218,7 +225,7 @@ SpewRetval_t  _SpewMessageType( SpewType_t spewType, tchar const* pMsgFormat, va
 	
 	assert( (uint) len < sizeof(pTempBuffer)/sizeof(pTempBuffer[0]) - 1 ); /* use normal assert here; to avoid recursion. */
 	assert( s_SpewOutputFunc );
-	
+		
 	/* direct it to the appropriate target(s) */
 	SpewRetval_t ret = s_SpewOutputFunc( spewType, pTempBuffer );
 	switch (ret)
