@@ -62,11 +62,14 @@ static void Printf( const char *fmt, ... )
 	DebugOutput( k_ESteamNetworkingSocketsDebugOutputType_Msg, text );
 }
 
+ISteamNetworkingSockets * _gnsInstance = nullptr;
+
 static void InitSteamDatagramConnectionSockets()
 {
 	#ifdef STEAMNETWORKINGSOCKETS_OPENSOURCE
 		SteamDatagramErrMsg errMsg;
-		if ( !GameNetworkingSockets_Init( nullptr, errMsg ) )
+		_gnsInstance = GameNetworkingSockets_Init(nullptr, errMsg);
+
 		{
 			fprintf( stderr, "GameNetworkingSockets_Init failed.  %s", errMsg );
 			exit(1);
@@ -95,7 +98,7 @@ static void InitSteamDatagramConnectionSockets()
 static void ShutdownSteamDatagramConnectionSockets()
 {
 	#ifdef STEAMNETWORKINGSOCKETS_OPENSOURCE
-		GameNetworkingSockets_Kill();
+		GameNetworkingSockets_Kill(_gnsInstance);
 	#else
 		SteamDatagramClient_Kill();
 	#endif
@@ -147,7 +150,7 @@ struct SFakePeer
 
 	inline void UpdateStats()
 	{
-		SteamNetworkingSockets()->GetQuickConnectionStatus( m_hSteamNetConnection, &m_info );
+		_gnsInstance->GetQuickConnectionStatus( m_hSteamNetConnection, &m_info );
 	}
 
 	inline int GetQueuedSendBytes()
@@ -173,7 +176,7 @@ struct SFakePeer
 		int cbSend = (int)( sizeof(msg) - sizeof(msg.m_data) + msg.m_cbSize );
 		m_nSendInterval += cbSend;
 
-		EResult result = SteamNetworkingSockets()->SendMessageToConnection(
+		EResult result = _gnsInstance->SendMessageToConnection(
 			m_hSteamNetConnection, 
 			&msg,
 			cbSend,
@@ -283,7 +286,7 @@ struct TestSteamNetworkingSocketsCallbacks : public ISteamNetworkingSocketsCallb
 			);
 
 			// Close our end
-			SteamNetworkingSockets()->CloseConnection( pInfo->m_hConn, 0, nullptr, false );
+			_gnsInstance->CloseConnection( pInfo->m_hConn, 0, nullptr, false );
 
 			if ( g_peerServer.m_hSteamNetConnection == pInfo->m_hConn )
 			{
@@ -317,8 +320,8 @@ struct TestSteamNetworkingSocketsCallbacks : public ISteamNetworkingSocketsCallb
 				Printf( "[%s] Accepting\n", pInfo->m_info.m_szConnectionDescription );
 				g_peerServer.m_hSteamNetConnection = pInfo->m_hConn;
 				g_peerServer.m_bIsConnected = true;
-				SteamNetworkingSockets()->AcceptConnection( pInfo->m_hConn );
-				SteamNetworkingSockets()->SetConnectionName( g_peerServer.m_hSteamNetConnection, "Server" );
+				_gnsInstance->AcceptConnection( pInfo->m_hConn );
+				_gnsInstance->SetConnectionName( g_peerServer.m_hSteamNetConnection, "Server" );
 
 			}
 			break;
@@ -347,7 +350,7 @@ static void PumpCallbacks()
 	#ifndef STEAMNETWORKINGSOCKETS_OPENSOURCE
 		SteamAPI_RunCallbacks();
 	#endif
-	SteamNetworkingSockets()->RunCallbacks( &g_Callbacks );
+		_gnsInstance->RunCallbacks( &g_Callbacks );
 	std::this_thread::sleep_for( std::chrono::milliseconds( 2 ) );
 }
 
@@ -391,7 +394,7 @@ static void PrintStatus( const SFakePeer &p1, const SFakePeer &p2 )
 
 static void TestNetworkConditions( int rate, float loss, int lag, float reorderPct, int reorderLag, bool bActLikeGame )
 {
-	ISteamNetworkingSockets *pSteamSocketNetworking = SteamNetworkingSockets();
+	ISteamNetworkingSockets *pSteamSocketNetworking = _gnsInstance;
 
 	Printf( "---------------------------------------------------\n" );
 	Printf( "NETWORK CONDITIONS\n" );
@@ -519,7 +522,7 @@ static void TestNetworkConditions( int rate, float loss, int lag, float reorderP
 
 static void RunSteamDatagramConnectionTest()
 {
-	ISteamNetworkingSockets *pSteamSocketNetworking = SteamNetworkingSockets();
+	ISteamNetworkingSockets *pSteamSocketNetworking = _gnsInstance;
 
 
 	// Command line options:
