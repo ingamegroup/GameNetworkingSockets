@@ -89,12 +89,16 @@ static void Printf( const char *fmt, ... )
 	DebugOutput( k_ESteamNetworkingSocketsDebugOutputType_Msg, text );
 }
 
+ISteamNetworkingSockets * _gnsInstance = nullptr;
+
 static void InitSteamDatagramConnectionSockets()
 {
 	#ifdef STEAMNETWORKINGSOCKETS_OPENSOURCE
 		SteamDatagramErrMsg errMsg;
-		if ( !GameNetworkingSockets_Init( nullptr, errMsg ) )
-			FatalError( "GameNetworkingSockets_Init failed.  %s", errMsg );
+		_gnsInstance = GameNetworkingSockets_Init(nullptr, errMsg);
+		{
+			FatalError("GameNetworkingSockets_Init failed.  %s", errMsg);
+		}
 	#else
 		SteamDatagramClient_SetAppIDAndUniverse( 570, k_EUniverseDev ); // Just set something, doesn't matter what
 
@@ -126,7 +130,7 @@ static void ShutdownSteamDatagramConnectionSockets()
 	std::this_thread::sleep_for( std::chrono::milliseconds( 500 ) );
 
 	#ifdef STEAMNETWORKINGSOCKETS_OPENSOURCE
-		GameNetworkingSockets_Kill();
+		GameNetworkingSockets_Kill(_gnsInstance);
 	#else
 		SteamDatagramClient_Kill();
 	#endif
@@ -233,7 +237,7 @@ public:
 	{
 		// Select instance to use.  For now we'll always use the default.
 		// But we could use SteamGameServerNetworkingSockets() on Steam.
-		m_pInterface = SteamNetworkingSockets();
+		m_pInterface = _gnsInstance;//SteamNetworkingSockets();
 
 		// Start listening
 		SteamNetworkingIPAddr serverLocalAddr;
@@ -526,7 +530,7 @@ public:
 	void Run( const SteamNetworkingIPAddr &serverAddr )
 	{
 		// Select instance to use.  For now we'll always use the default.
-		m_pInterface = SteamNetworkingSockets();
+		m_pInterface = _gnsInstance;//SteamNetworkingSockets();
 
 		// Start connecting
 		char szAddr[ SteamNetworkingIPAddr::k_cchMaxString ];
