@@ -53,7 +53,8 @@ endif()
 
 if(UNIX)
 	# fexceptions flag for compiler
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fexceptions")
+	SET(GCC_COVERAGE_COMPILE_FLAGS "-fexceptions")
+	SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
 endif()
 
 add_subdirectory(examples)
