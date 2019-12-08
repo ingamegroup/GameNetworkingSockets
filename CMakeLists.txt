@@ -51,6 +51,11 @@ if (WIN32)
 	endif()
 endif()
 
+if(UNIX)
+	# fexceptions flag for compiler
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fexceptions")
+endif()
+
 add_subdirectory(examples)
 add_subdirectory(src)
 add_subdirectory(tests)
