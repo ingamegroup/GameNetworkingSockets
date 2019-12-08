@@ -1284,7 +1284,11 @@ namespace SteamNetworkingSocketsLib {
 		// totally straightforward the correct way to do this on Linux.
 #endif
 
+#if defined(_WIN32)
 		__try
+#else
+		try
+#endif
 		{
 			// In the loop, we will always hold global lock while we're awake.
 		// So go ahead and acquire it now.  But watch out for a race condition
@@ -1393,10 +1397,15 @@ namespace SteamNetworkingSocketsLib {
 				ProcessPendingDestroyClosedRawUDPSockets();
 			}
 		}
+#if defined (_WIN32)
 		__except (EXCEPTION_CONTINUE_EXECUTION)
+#else
+		catch (const std::exception&)
+#endif
+
 		{
 
-		} 
+		}
 	}
 
 	static bool BEnsureSteamDatagramThreadRunning(SteamDatagramErrMsg & errMsg)
