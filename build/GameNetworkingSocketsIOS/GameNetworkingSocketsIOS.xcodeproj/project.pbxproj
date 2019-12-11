@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,12 +34,12 @@
 		7BC0E6FD22E498F200E0CB01 /* steamnetworkingsockets_shared.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6FC22E498F100E0CB01 /* steamnetworkingsockets_shared.cpp */; };
 		7BC0E70022E4990E00E0CB01 /* steamnetworkingsockets_snp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6FE22E4990E00E0CB01 /* steamnetworkingsockets_snp.cpp */; };
 		7BC0E70122E4990E00E0CB01 /* steamnetworkingsockets_udp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0E6FF22E4990E00E0CB01 /* steamnetworkingsockets_udp.cpp */; };
-		7BD5EF8422E5153E003BF8AC /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5EF8222E5153E003BF8AC /* libcrypto.a */; };
-		7BD5EF8522E5153E003BF8AC /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5EF8322E5153E003BF8AC /* libssl.a */; };
 		7BD5EF8D22E51F07003BF8AC /* strtools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5EF8C22E51F07003BF8AC /* strtools.cpp */; };
 		7BD5EF9022E51F26003BF8AC /* utlbuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5EF8E22E51F25003BF8AC /* utlbuffer.cpp */; };
 		7BD5EF9122E51F26003BF8AC /* utlmemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5EF8F22E51F26003BF8AC /* utlmemory.cpp */; };
-		7BD5EF9522E62270003BF8AC /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD5EF7E22E50C11003BF8AC /* libprotobuf.a */; };
+		8292E43A23A0FDF1004F4700 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8292E43723A0FDF1004F4700 /* libcrypto.a */; platformFilter = ios; };
+		8292E43B23A0FDF1004F4700 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8292E43823A0FDF1004F4700 /* libprotobuf.a */; platformFilter = ios; };
+		8292E43C23A0FDF1004F4700 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8292E43923A0FDF1004F4700 /* libssl.a */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,12 +84,12 @@
 		7BC0E6FC22E498F100E0CB01 /* steamnetworkingsockets_shared.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_shared.cpp; path = ../../../src/steamnetworkingsockets/steamnetworkingsockets_shared.cpp; sourceTree = "<group>"; };
 		7BC0E6FE22E4990E00E0CB01 /* steamnetworkingsockets_snp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_snp.cpp; path = ../../../src/steamnetworkingsockets/clientlib/steamnetworkingsockets_snp.cpp; sourceTree = "<group>"; };
 		7BC0E6FF22E4990E00E0CB01 /* steamnetworkingsockets_udp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = steamnetworkingsockets_udp.cpp; path = ../../../src/steamnetworkingsockets/clientlib/steamnetworkingsockets_udp.cpp; sourceTree = "<group>"; };
-		7BD5EF7E22E50C11003BF8AC /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../sdk/libprotobuf.a; sourceTree = "<group>"; };
-		7BD5EF8222E5153E003BF8AC /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../sdk/libcrypto.a; sourceTree = "<group>"; };
-		7BD5EF8322E5153E003BF8AC /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../sdk/libssl.a; sourceTree = "<group>"; };
 		7BD5EF8C22E51F07003BF8AC /* strtools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = strtools.cpp; path = ../../../src/vstdlib/strtools.cpp; sourceTree = "<group>"; };
 		7BD5EF8E22E51F25003BF8AC /* utlbuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utlbuffer.cpp; path = ../../../src/tier1/utlbuffer.cpp; sourceTree = "<group>"; };
 		7BD5EF8F22E51F26003BF8AC /* utlmemory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utlmemory.cpp; path = ../../../src/tier1/utlmemory.cpp; sourceTree = "<group>"; };
+		8292E43723A0FDF1004F4700 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../sdk/OpenSSL-iOS/libcrypto.a"; sourceTree = "<group>"; };
+		8292E43823A0FDF1004F4700 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = "../sdk/OpenSSL-iOS/libprotobuf.a"; sourceTree = "<group>"; };
+		8292E43923A0FDF1004F4700 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../sdk/OpenSSL-iOS/libssl.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +97,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD5EF9522E62270003BF8AC /* libprotobuf.a in Frameworks */,
-				7BD5EF8422E5153E003BF8AC /* libcrypto.a in Frameworks */,
-				7BD5EF8522E5153E003BF8AC /* libssl.a in Frameworks */,
+				8292E43A23A0FDF1004F4700 /* libcrypto.a in Frameworks */,
+				8292E43B23A0FDF1004F4700 /* libprotobuf.a in Frameworks */,
+				8292E43C23A0FDF1004F4700 /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,9 +163,9 @@
 		7BD5EEFD22E4BD4C003BF8AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7BD5EF8222E5153E003BF8AC /* libcrypto.a */,
-				7BD5EF8322E5153E003BF8AC /* libssl.a */,
-				7BD5EF7E22E50C11003BF8AC /* libprotobuf.a */,
+				8292E43723A0FDF1004F4700 /* libcrypto.a */,
+				8292E43823A0FDF1004F4700 /* libprotobuf.a */,
+				8292E43923A0FDF1004F4700 /* libssl.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -393,6 +393,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e";
 			};
 			name = Debug;
 		};
