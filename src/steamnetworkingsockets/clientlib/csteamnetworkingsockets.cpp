@@ -260,20 +260,10 @@ HSteamListenSocket AddListenSocket( CSteamNetworkListenSocketBase *pSock )
 
 int CSteamNetworkingSockets::s_nSteamNetworkingSocketsInitted = 0;
 
-//LAS
-typedef void(*ConnectionStatusChangedCallbackPtr)(int type, uint32 connection);
-ConnectionStatusChangedCallbackPtr connectionStatusChangedCallback;
-void emptyMethod(int a, uint32 b)
-{
-
-}
-
 CSteamNetworkingSockets::CSteamNetworkingSockets()
 : m_bHaveLowLevelRef( false )
 {
 	m_connectionConfig.Init( nullptr );
-	// LAS
-	connectionStatusChangedCallback = emptyMethod;
 }
 
 CSteamNetworkingSockets::~CSteamNetworkingSockets()
@@ -751,11 +741,6 @@ bool CSteamNetworkingSockets::SetCertificate( const void *pCert, int cbCert, voi
 	return true;
 }
 
-STEAMNETWORKINGSOCKETS_INTERFACE void SteamAPI_ConnectionStatusChangedCallback(ConnectionStatusChangedCallbackPtr callback, int type, uint32 connection)
-{
-	connectionStatusChangedCallback = callback;
-}
-
 #ifdef STEAMNETWORKINGSOCKETS_STANDALONELIB
 void CSteamNetworkingSockets::RunCallbacks( ISteamNetworkingSocketsCallbacks *pCallbacks )
 { 
@@ -779,10 +764,6 @@ void CSteamNetworkingSockets::RunCallbacks( ISteamNetworkingSocketsCallbacks *pC
 			{	
 				COMPILE_TIME_ASSERT(sizeof(SteamNetConnectionStatusChangedCallback_t) <= sizeof(x.data));
 				pCallbacks->OnSteamNetConnectionStatusChanged((SteamNetConnectionStatusChangedCallback_t*)x.data);
-
-				// LAS
-				SteamNetConnectionStatusChangedCallback_t *data = (SteamNetConnectionStatusChangedCallback_t*)x.data;
-				connectionStatusChangedCallback(data->m_info.m_eState, data->m_hConn);
 
 				break;
 			}
