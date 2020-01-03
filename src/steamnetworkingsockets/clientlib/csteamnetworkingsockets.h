@@ -31,6 +31,9 @@ class CSteamNetworkingSockets : public IClientNetworkingSockets
 public:
 	CSteamNetworkingSockets();
 
+	//LAS
+	void(*_connectionStatusChangedCallbackPtr)(int type, uint32 connection);
+
 	bool m_bHaveLowLevelRef;
 	AppId_t m_nAppID;
 

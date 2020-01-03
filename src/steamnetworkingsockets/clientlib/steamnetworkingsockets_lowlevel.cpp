@@ -1250,10 +1250,7 @@ std::atomic<bool> g_bWantThreadRunning;
 
 static void SteamDatagramThreadProc()
 {
-#if __ANDROID__
-	try
-	{
-#endif
+ 
 		// This is an "interrupt" thread.  When an incoming packet raises the event,
 	// we need to take priority above normal threads and wake up immediately
 	// to process the packet.  We should be asleep most of the time waiting
@@ -1423,13 +1420,6 @@ static void SteamDatagramThreadProc()
 			// not polling on them and we know we hold the lock
 			ProcessPendingDestroyClosedRawUDPSockets();
 		}
-#if __ANDROID__
-	}
-	catch (const std::exception&)
-	{
-
-	}
-#endif	
 }
 
 static bool BEnsureSteamDatagramThreadRunning( SteamDatagramErrMsg &errMsg )

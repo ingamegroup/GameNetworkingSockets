@@ -192,7 +192,8 @@ start .</Command>
       </FloatABI>
       <AdditionalOptions>
       </AdditionalOptions>
-      <ExceptionHandling>UnwindTables</ExceptionHandling>
+      <ExceptionHandling>Disabled</ExceptionHandling>
+      <UseShortEnums>false</UseShortEnums>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)sdk\protobuf-armv8\lib;$(SolutionDir)sdk\OpenSSL-armv8\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>

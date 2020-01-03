@@ -5,6 +5,9 @@
 #include "steamnetworkingsockets_connections.h"
 #include "steamnetworkingsockets_udp.h"
 #include "crypto.h"
+#ifdef __ANDROID__
+#include <android/log.h>
+#endif
 
 #ifdef STEAMNETWORKINGSOCKETS_STANDALONELIB
 #include <steam/steamnetworkingsockets.h>
@@ -263,6 +266,7 @@ int CSteamNetworkingSockets::s_nSteamNetworkingSocketsInitted = 0;
 CSteamNetworkingSockets::CSteamNetworkingSockets()
 : m_bHaveLowLevelRef( false )
 {
+	_connectionStatusChangedCallbackPtr = nullptr;
 	m_connectionConfig.Init( nullptr );
 }
 
@@ -741,6 +745,11 @@ bool CSteamNetworkingSockets::SetCertificate( const void *pCert, int cbCert, voi
 	return true;
 }
 
+STEAMNETWORKINGSOCKETS_INTERFACE void SteamAPI_ConnectionStatusChangedCallback(CSteamNetworkingSockets *sockets, void(*ConnectionStatusChangedCallbackPtr)(int type, uint32 connection))
+{
+	sockets->_connectionStatusChangedCallbackPtr = ConnectionStatusChangedCallbackPtr;
+}
+
 #ifdef STEAMNETWORKINGSOCKETS_STANDALONELIB
 void CSteamNetworkingSockets::RunCallbacks( ISteamNetworkingSocketsCallbacks *pCallbacks )
 { 
@@ -765,6 +774,12 @@ void CSteamNetworkingSockets::RunCallbacks( ISteamNetworkingSocketsCallbacks *pC
 				COMPILE_TIME_ASSERT(sizeof(SteamNetConnectionStatusChangedCallback_t) <= sizeof(x.data));
 				pCallbacks->OnSteamNetConnectionStatusChanged((SteamNetConnectionStatusChangedCallback_t*)x.data);
 
+				if (_connectionStatusChangedCallbackPtr != nullptr)
+				{
+					// LAS
+					SteamNetConnectionStatusChangedCallback_t *data = (SteamNetConnectionStatusChangedCallback_t*)x.data;
+					_connectionStatusChangedCallbackPtr(data->m_info.m_eState, data->m_hConn);
+				}
 				break;
 			}
 		#ifdef STEAMNETWORKINGSOCKETS_ENABLE_SDR
