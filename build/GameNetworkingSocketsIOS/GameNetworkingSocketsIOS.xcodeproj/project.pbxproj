@@ -37,9 +37,9 @@
 		7BD5EF8D22E51F07003BF8AC /* strtools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5EF8C22E51F07003BF8AC /* strtools.cpp */; };
 		7BD5EF9022E51F26003BF8AC /* utlbuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5EF8E22E51F25003BF8AC /* utlbuffer.cpp */; };
 		7BD5EF9122E51F26003BF8AC /* utlmemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5EF8F22E51F26003BF8AC /* utlmemory.cpp */; };
-		8292E43A23A0FDF1004F4700 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8292E43723A0FDF1004F4700 /* libcrypto.a */; platformFilter = ios; };
-		8292E43B23A0FDF1004F4700 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8292E43823A0FDF1004F4700 /* libprotobuf.a */; platformFilter = ios; };
-		8292E43C23A0FDF1004F4700 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8292E43923A0FDF1004F4700 /* libssl.a */; platformFilter = ios; };
+		82BEBB9023C00390005F6643 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BEBB8F23C00390005F6643 /* libprotobuf.a */; platformFilter = ios; };
+		82BEBB9323C00568005F6643 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BEBB9123C00568005F6643 /* libssl.a */; };
+		82BEBB9423C00568005F6643 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82BEBB9223C00568005F6643 /* libcrypto.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,9 +87,9 @@
 		7BD5EF8C22E51F07003BF8AC /* strtools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = strtools.cpp; path = ../../../src/vstdlib/strtools.cpp; sourceTree = "<group>"; };
 		7BD5EF8E22E51F25003BF8AC /* utlbuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utlbuffer.cpp; path = ../../../src/tier1/utlbuffer.cpp; sourceTree = "<group>"; };
 		7BD5EF8F22E51F26003BF8AC /* utlmemory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utlmemory.cpp; path = ../../../src/tier1/utlmemory.cpp; sourceTree = "<group>"; };
-		8292E43723A0FDF1004F4700 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../sdk/OpenSSL-iOS/libcrypto.a"; sourceTree = "<group>"; };
-		8292E43823A0FDF1004F4700 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = "../sdk/OpenSSL-iOS/libprotobuf.a"; sourceTree = "<group>"; };
-		8292E43923A0FDF1004F4700 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../sdk/OpenSSL-iOS/libssl.a"; sourceTree = "<group>"; };
+		82BEBB8F23C00390005F6643 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = "../sdk/OpenSSL-iOS/libprotobuf.a"; sourceTree = "<group>"; };
+		82BEBB9123C00568005F6643 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../sdk/OpenSSL-iOS/libssl.a"; sourceTree = "<group>"; };
+		82BEBB9223C00568005F6643 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../sdk/OpenSSL-iOS/libcrypto.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +97,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8292E43A23A0FDF1004F4700 /* libcrypto.a in Frameworks */,
-				8292E43B23A0FDF1004F4700 /* libprotobuf.a in Frameworks */,
-				8292E43C23A0FDF1004F4700 /* libssl.a in Frameworks */,
+				82BEBB9023C00390005F6643 /* libprotobuf.a in Frameworks */,
+				82BEBB9323C00568005F6643 /* libssl.a in Frameworks */,
+				82BEBB9423C00568005F6643 /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,9 +163,9 @@
 		7BD5EEFD22E4BD4C003BF8AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8292E43723A0FDF1004F4700 /* libcrypto.a */,
-				8292E43823A0FDF1004F4700 /* libprotobuf.a */,
-				8292E43923A0FDF1004F4700 /* libssl.a */,
+				82BEBB9223C00568005F6643 /* libcrypto.a */,
+				82BEBB9123C00568005F6643 /* libssl.a */,
+				82BEBB8F23C00390005F6643 /* libprotobuf.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 				};
 			};
 			buildConfigurationList = 7BC0E6BF22E4956900E0CB01 /* Build configuration list for PBXProject "GameNetworkingSocketsIOS" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -267,7 +267,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -312,8 +312,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				MACH_O_TYPE = mh_dylib;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -327,7 +327,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -366,9 +366,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LIBRARY_SEARCH_PATHS = "../../build/sdk/**";
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -384,15 +384,15 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_BITCODE = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 arm64e";
 			};
 			name = Debug;
@@ -404,7 +404,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				ENABLE_BITCODE = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					OSX,
 					STEAMNETWORKINGSOCKETS_FOREXPORT,
@@ -423,15 +423,16 @@
 					../../include,
 					"../../build/sdk/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LIBRARY_SEARCH_PATHS = "../../build/sdk/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)\"/../sdk/OpenSSL-iOS/**";
 				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = arm64;
 			};
 			name = Release;
