@@ -1000,6 +1000,7 @@ void CSteamNetworkConnectionUDP::ConnectionStateChanged( ESteamNetworkingConnect
 		case k_ESteamNetworkingConnectionState_FinWait:
 		case k_ESteamNetworkingConnectionState_ProblemDetectedLocally:
 			SendConnectionClosedOrNoConnection();
+			FreeResources(); // LAS
 			break;
 
 		case k_ESteamNetworkingConnectionState_Linger:
@@ -1184,6 +1185,7 @@ void CSteamNetworkConnectionUDP::Received_Data( const uint8 *pPkt, int cbPkt, St
 		case k_ESteamNetworkingConnectionState_FinWait:
 		case k_ESteamNetworkingConnectionState_ProblemDetectedLocally:
 			SendConnectionClosedOrNoConnection();
+			FreeResources(); // LAS
 			return;
 
 		case k_ESteamNetworkingConnectionState_Linger:
@@ -1480,6 +1482,7 @@ void CSteamNetworkConnectionUDP::Received_ConnectOK( const CMsgSteamSockets_UDP_
 		case k_ESteamNetworkingConnectionState_FinWait:
 		case k_ESteamNetworkingConnectionState_ProblemDetectedLocally:
 			SendConnectionClosedOrNoConnection();
+			FreeResources(); // LAS
 			return;
 
 		case k_ESteamNetworkingConnectionState_Linger:
@@ -1585,6 +1588,7 @@ void CSteamNetworkConnectionUDP::Received_ChallengeOrConnectRequest( const char 
 		case k_ESteamNetworkingConnectionState_FinWait:
 		case k_ESteamNetworkingConnectionState_ProblemDetectedLocally:
 			SendConnectionClosedOrNoConnection();
+			FreeResources(); // LAS
 			return;
 
 		case k_ESteamNetworkingConnectionState_Connecting:
@@ -1624,7 +1628,7 @@ void CSteamNetworkConnectionUDP::SendConnectionClosedOrNoConnection()
 		msg.set_reason_code( m_eEndReason );
 		if ( m_szEndDebug[0] )
 			msg.set_debug( m_szEndDebug );
-		SendPaddedMsg( k_ESteamNetworkingUDPMsg_ConnectionClosed, msg );
+		SendPaddedMsg( k_ESteamNetworkingUDPMsg_ConnectionClosed, msg ); 
 	}
 }
 
