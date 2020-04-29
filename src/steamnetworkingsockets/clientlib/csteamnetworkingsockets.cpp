@@ -745,7 +745,7 @@ bool CSteamNetworkingSockets::SetCertificate( const void *pCert, int cbCert, voi
 	return true;
 }
 
-STEAMNETWORKINGSOCKETS_INTERFACE void SteamAPI_ConnectionStatusChangedCallback(CSteamNetworkingSockets *sockets, void(*ConnectionStatusChangedCallbackPtr)(int type, uint32 connection))
+STEAMNETWORKINGSOCKETS_INTERFACE void SteamAPI_ConnectionStatusChangedCallback(CSteamNetworkingSockets *sockets, void(*ConnectionStatusChangedCallbackPtr)(int type, uint32 connection, int tReason))
 {
 	sockets->_connectionStatusChangedCallbackPtr = ConnectionStatusChangedCallbackPtr;
 }
@@ -778,7 +778,7 @@ void CSteamNetworkingSockets::RunCallbacks( ISteamNetworkingSocketsCallbacks *pC
 				{
 					// LAS
 					SteamNetConnectionStatusChangedCallback_t *data = (SteamNetConnectionStatusChangedCallback_t*)x.data;
-					_connectionStatusChangedCallbackPtr(data->m_info.m_eState, data->m_hConn);
+					_connectionStatusChangedCallbackPtr(data->m_info.m_eState, data->m_hConn, data->m_info.m_eEndReason);
 				}
 				break;
 			}

@@ -32,7 +32,7 @@ public:
 	CSteamNetworkingSockets();
 
 	//LAS
-	void(*_connectionStatusChangedCallbackPtr)(int type, uint32 connection);
+	void(*_connectionStatusChangedCallbackPtr)(int type, uint32 connection, int endReason);
 
 	bool m_bHaveLowLevelRef;
 	AppId_t m_nAppID;
